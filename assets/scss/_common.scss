@@ -4,7 +4,7 @@
   
   html {
     letter-spacing: 0.1em;
-    color: #637588;
+    color: $color-gray;
     font-family: $font-main;
     font-size: 16px;
     overflow-y: scroll;
@@ -32,20 +32,36 @@
     color: $color-primary;
     font-family: $font-header;
     line-height: 1.2em;
+
+    @include sm {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    @include lg-min {
+      margin-bottom: 56px;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      margin-bottom: 42px;
+      font-size: 2rem;
+    }
   }
   
   h3 {
-    color: #637588;
+    color: $color-gray;
   }
   
   p {
     letter-spacing: 1px;
-    color: #637588;
+    color: $color-gray;
   }
   
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: $color-light;
   }
   
   input:focus {
@@ -54,7 +70,7 @@
   
   .btn {
     min-width: 250px;
-    border: 2px solid #ffffff;
+    border: 2px solid $color-light;
     background-color: rgba(255, 255, 255, 0.1);
   
     @extend %btn;

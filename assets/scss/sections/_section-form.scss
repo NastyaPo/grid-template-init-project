@@ -1,0 +1,74 @@
+.form {
+  padding: ($gap * 1.5) 0;
+  background-color: $color-primary;
+  &__container {
+      display: grid;
+      grid-gap: $gap;
+      
+      @extend %container;
+
+      @include md-sm {
+          grid-template-columns: 1fr 1fr;
+      }
+      @include lg-min {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      @include lg-md {
+          grid-template-columns: repeat(3, 1fr);
+        }
+    }
+  .btn-accent {
+    width: 100%;
+    color: $color-light;
+    border-color: rgba($color-light, 0);
+    border-bottom-color: rgba($color-light, 0.2);
+    background-color: rgba($color-light, 0.1);
+    letter-spacing: 0.15rem;
+    transition: border-color 0.5s, background-color 0.5s;
+    &:focus,
+    &:hover {
+    border-color: $color-light;
+    background-color: $color-accent;
+    cursor: pointer;
+    }
+  } 
+}
+
+.form-item {
+  &:nth-of-type(1) {
+    @include md-sm {
+    grid-column: 1 / span 2;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: ($gap * 3);
+    padding-right: $gap;
+    padding-left: $gap;
+    letter-spacing: 0.15rem;
+    color: $color-light;
+    border: 2px solid rgba($color-light, 0);
+    border-bottom-color: rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.05);
+    font-size: 1.125rem;
+    transition: border-color 0.5s, background-color 0.5s;
+ 
+    &:focus,
+    &:hover {
+      border-color: rgba($color-light, 0.15);
+      border-bottom-color: $color-light;
+      background-color: rgba($color-light, 0.15);
+    } 
+  }
+}
+
+  
+
+  
+
+ 
+
+
+
