@@ -26,8 +26,8 @@
                             "a7"
                             "a8"
                             "a9";
-
     }
+
     @include md-sm {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
@@ -38,6 +38,7 @@
                           "a5 a7"
                           "a8 a9";
     }
+    
     @include lg-md {
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);

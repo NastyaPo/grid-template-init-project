@@ -1,22 +1,22 @@
 .form {
   padding: ($gap * 1.5) 0;
   background-color: $color-primary;
-  &__container {
-      display: grid;
-      grid-gap: $gap;
-      
-      @extend %container;
 
-      @include md-sm {
-          grid-template-columns: 1fr 1fr;
-      }
-      @include lg-min {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      @include lg-md {
-          grid-template-columns: repeat(3, 1fr);
-        }
+  &__container {
+    display: grid;
+    grid-gap: $gap;
+    
+    @extend %container;
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
     }
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
   .btn-accent {
     width: 100%;
     color: $color-light;
@@ -25,13 +25,13 @@
     background-color: rgba($color-light, 0.1);
     letter-spacing: 0.15rem;
     transition: border-color 0.5s, background-color 0.5s;
+
     &:focus,
     &:hover {
-    border-color: $color-light;
-    background-color: $color-accent;
-    cursor: pointer;
+      border-color: $color-light;
+      background-color: $color-accent;
+      cursor: pointer;
     }
-
   } 
 }
 

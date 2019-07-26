@@ -1,123 +1,129 @@
 .posts {
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  &__container {
+    @extend %container;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "b1 b1 b2 b3"
+                          "b4 b5 b6 b6";
+    grid-gap: $gap;
+    padding-bottom: $gap;
 
-    &__container {
-        @extend %container;
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-template-areas: "b1"
+                            "b2"
+                            "b3"
+                            "b4"
+                            "b5"
+                            "b6";
     }
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "b1 b1 b2 b3"
-                              "b4 b5 b6 b6";
-        grid-gap: $gap;
-        padding-bottom: $gap;
-
-        @include sm {
-            grid-template-columns: 1fr;
-            grid-template-areas: "b1"
-                                  "b2"
-                                  "b3"
-                                  "b4"
-                                  "b5"
-                                  "b6";
-        }
-        @include md-sm {
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "b1 b2"
-                                  "b3 b4"
-                                  "b5 b6";
-        }
-        @include lg-md {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "b1 b1 b2"
-                                  "b3 b4 b4"
-                                  "b5 b5 b6";
-        }
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "b1 b2"
+                            "b3 b4"
+                            "b5 b6";
     }
-
-    &__button {
-        display: flex;
-        justify-content: center;
-
-        @include sm {
-            & .btn-accent{
-                width: 100%;
-              }
-        }
-        @include sm-min {
-            & .btn-accent {
-                min-width: 350px;
-                }
-        }
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "b1 b1 b2"
+                            "b3 b4 b4"
+                            "b5 b5 b6";
     }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    @include sm {
+      & .btn-accent{
+        width: 100%;
+      }
+    }
+    @include sm-min {
+      & .btn-accent {
+        min-width: 350px;
+      }
+    }
+  }
 }
 
 .post-item {
-    background-color: #f2f2f2;
-    transition: background-color 0.5s;
-
-    &:nth-of-type(1) {
-        grid-area: b1;
-      }
-    &:nth-of-type(2) {
-        grid-area: b2;
-      }
-    &:nth-of-type(3) {
-        grid-area: b3;
-      }
-    &:nth-of-type(4) {
-        grid-area: b4;
-      }
-    &:nth-of-type(5) {
-        grid-area: b5;
-      }
-    &:nth-of-type(6) {
-        grid-area: b6;
+  background-color: #f2f2f2;
+  transition: background-color 0.5s;
+  &:nth-of-type(1) {
+      grid-area: b1;
     }
-    &:hover {
-      background-color: #d8d8d8;
-      .post-item__image img {
-        transform: scale(1.1);
-      }
-      h3 {
-          color: $color-primary;
-      }
-      p {
-          color: $color-primary;
-      }
+  &:nth-of-type(2) {
+      grid-area: b2;
     }
-    &__link {
-        display: grid;
-        height: 100%;
-        grid-template-rows: 300px 1fr;
-        overflow: hidden;
-      }
-    &__image {
-      display: flex;
-      background-color: $color-primary;
-      align-content: center;
-      justify-content: center;
-      overflow: hidden;
-      img {
-        width: 100%;
-        transition: transform 0.5s;
-        object-fit: cover;
-      }
+  &:nth-of-type(3) {
+      grid-area: b3;
     }
-    &__caption {
-        display: grid;
-        padding: $gap;
-        align-content: center;
-
-        h3,
-        p {
-        text-align: center;
-        transition: color 0.5s;
-        }
-      }
-      
+  &:nth-of-type(4) {
+      grid-area: b4;
+    }
+  &:nth-of-type(5) {
+      grid-area: b5;
+    }
+  &:nth-of-type(6) {
+      grid-area: b6;
   }
+  &:hover {
+    background-color: #d8d8d8;
+    .post-item__image img {
+      transform: scale(1.1);
+    }
+    h3 {
+      color: $color-primary;
+    }
+    p {
+      color: $color-primary;
+    }
+  }
+  &__link {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+    overflow: hidden;
+    }
+  &__image {
+    display: flex;
+    background-color: $color-primary;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transition: transform 0.5s;
+      object-fit: cover;
+    }
+  }
+  &__caption {
+    display: grid;
+    padding: $gap;
+    align-content: center;
+
+    h3,
+    p {
+      text-align: center;
+      transition: color 0.5s;
+    }
+  }    
+}
 
 .post-item
 .post-item:hover .post-item__image img {
