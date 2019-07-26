@@ -27,9 +27,6 @@
                             "a8"
                             "a9";
 
-      .skills__button .btn-accent {
-        width: 100%;
-      }
     }
     @include md-sm {
     grid-gap: 10px;
@@ -54,6 +51,11 @@
   &__button {
     display: flex;
     justify-content: center;
+    @include sm {
+      .btn-accent {
+        width: 100%;
+      }
+    }
 
     @include sm-min {
     .btn-accent {
