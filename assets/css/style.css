@@ -1260,7 +1260,7 @@ input:focus {
     height: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    letter-spacing: 0.05tm;
+    letter-spacing: 0.05em;
     font-size: 1rem;
   }
   .header-content__buttons .btn:not(:last-of-type) {
@@ -1320,7 +1320,7 @@ input:focus {
     height: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    letter-spacing: 0.05tm;
+    letter-spacing: 0.05em;
     font-size: 1rem;
   }
   .header-content__buttons .btn:not(:last-of-type) {
