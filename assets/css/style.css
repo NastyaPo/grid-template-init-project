@@ -947,6 +947,10 @@ input:focus {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+.posts h2 {
+  margin-top: 0;
+}
+
 .posts__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1262,6 +1266,10 @@ input:focus {
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
+  h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
   .header-content__buttons .btn {
     min-width: 170px;
     height: 40px;
